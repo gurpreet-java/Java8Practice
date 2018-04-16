@@ -5,16 +5,8 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.Period;
 
-/*
-    - 
-	- Work with dates and times across time-zones and manage changes resulting from daylight savings including 
-		Format date and times values
-	- Define and create and manage date-based and time-based events using Instant, Period, Duration
-	 	and TemporalUnit.
- */
-
 /**
- * Aim: Create and manage date-based and time-based events including a combination of date and time into a single 
+ * A. Create and manage date-based and time-based events including a combination of date and time into a single 
   		object using LocalDate, LocalTime, LocalDateTime, Instant, Period, and Duration.
  * @author Gurpreet.Singh
  *
