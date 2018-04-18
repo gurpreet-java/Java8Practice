@@ -7,7 +7,7 @@ import java.time.Period;
 
 /**
  * A. Create and manage date-based and time-based events including a combination of date and time into a single 
-  		object using LocalDate, LocalTime, LocalDateTime, Instant, Period, and Duration.
+ *		object using LocalDate, LocalTime, LocalDateTime, Instant, Period, and Duration.
  * @author Gurpreet.Singh
  *
  */
