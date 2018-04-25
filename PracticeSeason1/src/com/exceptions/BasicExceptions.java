@@ -22,7 +22,9 @@ public class BasicExceptions {
 		}
 	}
 	
-	// Use Autoclose resources with a try-with-resources statement
+	/*
+	 *  Use Autoclose resources with a try-with-resources statement
+	 */
 	public void autocloseResources() throws IOException {
 		String path = "D://code back up/MyRepositories/Java8Practice/PracticeSeason1/src/com/exceptions/basic.txt";
 		BufferedReader reader = new BufferedReader(new FileReader(new File(path)));
@@ -31,12 +33,10 @@ public class BasicExceptions {
 		} finally {
 			reader.close();
 		}
-		
 		// No need of catch or finally.
 		try (BufferedReader readerAutoclose = new BufferedReader(new FileReader(new File(path)))) {
 			log.println(readerAutoclose.readLine());
 		}
-		
 		// Custom Auto-Close resource.
 		class MyResource implements AutoCloseable {
 			@Override
@@ -49,9 +49,16 @@ public class BasicExceptions {
 		}
 	}
 	
-	// Create custom exceptions and Auto-closeable resources
+	/*
+	 *  Create custom exceptions and Auto-closeable resources
+	 */
+	public void customException() throws MyException {
+		throw new MyException("null pointer exception.");
+	}
 	
-	// Test invariants by using assertions 
+	/*
+	 *	Test invariants by using assertions. 
+	 */
 	
 	public static void main(String[] args) {
 		BasicExceptions be = new BasicExceptions();
@@ -63,5 +70,12 @@ public class BasicExceptions {
 			log.println(e.getMessage());
 		}
 	}
-
+	
+	class MyException extends Exception {
+		private static final long serialVersionUID = 1L;
+		public MyException(String e) {
+			log.println("Exception occured: "+e);
+		}
+	}
+	
 }
